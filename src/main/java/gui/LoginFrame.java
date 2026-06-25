@@ -42,14 +42,14 @@ public class LoginFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // Centra la finestra sullo schermo
 
-        // Listener reattivo per la gestione dell'evento di login (Slide 21)
+        // Listener reattivo per la gestione dell'evento di login 
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String login = txtLogin.getText();
                 String password = new String(txtPassword.getPassword());
 
-                // Delega l'elaborazione dell'autenticazione al Controller (Slide 34)
+                // Delega l'elaborazione dell'autenticazione al Controller 
                 boolean successo = Controller.getInstance().effettuaLogin(login, password);
 
                 if (successo) {
@@ -60,7 +60,7 @@ public class LoginFrame extends JFrame {
                     if (loggato instanceof Studente) {
                         DashboardStudente dashboard = new DashboardStudente();
                         dashboard.setVisible(true);
-                        dispose(); // Dealloca il login per risparmiare memoria (Slide 36)
+                        dispose(); // Dealloca il login per risparmiare memoria 
                     } else if (loggato instanceof Responsabile) {
                         DashboardResponsabile dashboardResponsabile = new DashboardResponsabile();
                         dashboardResponsabile.setVisible(true);
@@ -76,13 +76,13 @@ public class LoginFrame extends JFrame {
             }
         });
 
-        // Listener per aprire la finestra di registrazione (Slide 30)
+        // Listener per aprire la finestra di registrazione 
         btnRegistra.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RegistrazioneFrame regFrame = new RegistrazioneFrame(LoginFrame.this);
                 regFrame.setVisible(true);
-                setVisible(false); // Rende invisibile il frame chiamante (Slide 30)
+                setVisible(false); // Rende invisibile il frame chiamante 
             }
         });
     }

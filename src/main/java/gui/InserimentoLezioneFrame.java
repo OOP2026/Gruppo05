@@ -74,7 +74,7 @@ public class InserimentoLezioneFrame extends JFrame {
             }
         });
 
-        // Inserimento Insegnamento "on the fly" con Dialog strutturati
+       
         btnNuovoInsegnamento.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -91,7 +91,7 @@ public class InserimentoLezioneFrame extends JFrame {
                     return;
                 }
 
-                // Scelta dell'anno di corso tramite ComboBox integrato in un Dialog (Slide 26)
+                // Scelta dell'anno di corso tramite ComboBox integrato in un Dialog
                 AnnoCorso anno = (AnnoCorso) JOptionPane.showInputDialog(
                         null, "Seleziona l'anno di corso:", "Anno Corso",
                         JOptionPane.QUESTION_MESSAGE, null, AnnoCorso.values(), AnnoCorso.I_ANNO
@@ -116,7 +116,7 @@ public class InserimentoLezioneFrame extends JFrame {
                 boolean ok = Controller.getInstance().inserisciNuovoInsegnamento(nomeInsegnamento.trim(), cfu, anno, docenteSel);
                 if (ok) {
                     JOptionPane.showMessageDialog(null, "Insegnamento registrato con successo!");
-                    ricaricaInsegnamenti(); // Aggiorna a runtime il ComboBox
+                    ricaricaInsegnamenti(); 
                 } else {
                     JOptionPane.showMessageDialog(null, "Errore durante l'inserimento.");
                 }
@@ -176,7 +176,7 @@ public class InserimentoLezioneFrame extends JFrame {
      * corrente per svuotare la memoria
      */
     private void tornaIndietro() {
-        frameChiamante.setVisible(true); // Restituisce visibilità alla Dashboard (
+        frameChiamante.setVisible(true); // Restituisce visibilità alla Dashboard 
         dispose(); // Dealloca l'oggetto corrente
     }
 
