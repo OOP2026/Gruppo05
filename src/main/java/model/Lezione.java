@@ -1,6 +1,4 @@
 package model;
-
-import model.GiornoSettimana;
 import java.time.LocalTime;
 /**
  * Rappresenta un singolo blocco didattico orario schedulato in calendario.

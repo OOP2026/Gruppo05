@@ -1,6 +1,4 @@
 package model;
-
-import model.*;
 import java.time.LocalTime;
 
 /**

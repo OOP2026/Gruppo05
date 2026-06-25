@@ -5,14 +5,12 @@ import model.Lezione;
 import model.Studente;
 
 import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
+
 import javax.swing.table.DefaultTableModel;
-import javax.swing.text.StyleContext;
-import java.awt.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Finestra di Boundary dedicata alla consultazione dell'orario settimanale
