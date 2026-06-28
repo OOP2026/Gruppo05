@@ -15,11 +15,11 @@ import java.util.List;
 
 
 /**
- * Finestra di Boundary adibita al ruolo gestionale del Responsabile (Coordinatore).
+ * Finestra della gui nella quale va ad operare il responsabile.
  * <p>
- * Offre una panoramica delle proposte di spostamento inviate dai docenti e
- * mette a disposizione gli eventi di approvazione o rifiuto dei ticket,
- * oltre ai collegamenti per la definizione di corsi ed aule.
+ * Si compone delle proposte si spostamento sottoscritte dai docenti
+ * e mette si occupa di gestire,approvando o rifiutando le richieste
+ * oltre ai collegamenti per la definizione di corsi ed aule
  * </p>
  */
 public class DashboardResponsabile extends JFrame {
@@ -72,7 +72,7 @@ public class DashboardResponsabile extends JFrame {
             }
         });
 
-        // 2. Apertura della finestra di Pianificazione nuove lezioni
+        // 2. Generazione popup di generazione nuove lezioni
         btnPianifica.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -82,7 +82,7 @@ public class DashboardResponsabile extends JFrame {
             }
         });
 
-        // 3. Approvazione dello spostamento orario (Slide 21)
+        // 3. Tasto di approvazione richiesta spostamento
         btnApprova.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -98,7 +98,7 @@ public class DashboardResponsabile extends JFrame {
             }
         });
 
-        // 4. Rifiuto della richiesta di spostamento
+        // 4. Tasto di rifiuto della richiesta di spostamento
         btnRifiuta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -114,7 +114,7 @@ public class DashboardResponsabile extends JFrame {
             }
         });
 
-        // 5. Logout di sistema
+        // 5. Uscita dal sistema
         btnLogout.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -126,7 +126,7 @@ public class DashboardResponsabile extends JFrame {
     }
 
     /**
-     * Aggiorna a runtime la tabella delle richieste attive in sospeso recuperando
+     * Aggiorna a tempo di compilazione la tabella relativa alle richieste attive in sospeso recuperando
      * i dati aggiornati dallo strato di controllo.
      */
     private void aggiornaTabella() {
